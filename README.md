@@ -130,12 +130,14 @@ Show the exception handling and fallback extractor. Explain that one failed doma
 
 ## Submission checklist
 
-- [ ] Push this folder to a public/private GitHub repository as appropriate.
-- [ ] Include the repository URL in the submission email.
-- [ ] Include `output/output.json`.
-- [ ] Record a 2–3 minute Loom demo.
-## Candidate
+GitHub Repository:
+https://github.com/Chetanpatil19/softwarebrio-ai-lead-enrichment-agent
 
-LinkedIn: https://www.linkedin.com/in/chetan-patil-b68288319
+Loom demo: 
+https://www.loom.com/share/655a0b44afed4bd0867d10c4bf722281
 
-- [ ] Explicitly answer the mandatory 40% manual-operations question.
+LinkedIn:
+https://www.linkedin.com/in/chetan-patil-b68288319
+
+Operations Question:
+Yes. I am 100% comfortable spending roughly 40% of my working hours on manual lead prospecting, email discovery, and account handling alongside my AI engineering responsibilities.
