@@ -1,0 +1,133 @@
+
+# SoftwareBrio AI Engineer Intern — Autonomous Lead Enrichment Agent
+
+A Python autonomous web-enrichment pipeline built for the SoftwareBrio take-home assignment.
+
+## What it does
+
+1. Accepts a list of company domains.
+2. Uses Playwright/Chromium to render pages, including JavaScript-driven pages.
+3. Starts at each homepage and discovers relevant same-domain pages such as About, Team, Contact, Pricing and Company pages.
+4. Removes scripts, styles, SVGs, navigation/footer boilerplate and other noisy HTML before LLM processing.
+5. Extracts:
+   - two-sentence company overview
+   - target audience / ICP
+   - public generic contact emails
+   - leadership/team members and LinkedIn URLs when discoverable
+   - data confidence score from 0.0 to 1.0
+6. Uses Pydantic structured output with an OpenAI model.
+7. Falls back gracefully when a site fails, an LLM key is missing, a page times out, or content is unavailable.
+
+## Architecture
+
+```text
+domains
+   |
+   v
+Playwright browser
+   |
+   +--> homepage
+   |
+   +--> ranked internal links
+           |
+           v
+     cleaned text/DOM
+           |
+           v
+      OpenAI structured extraction
+           |
+           v
+      Pydantic schema
+           |
+           v
+       output.json
+```
+
+## Setup
+
+Python 3.10+ is recommended.
+
+```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+
+pip install -r requirements.txt
+playwright install chromium
+```
+
+Create `.env` from `.env.example` and set:
+
+```env
+OPENAI_API_KEY=...
+OPENAI_MODEL=gpt-4o-mini
+```
+
+## Run the assignment targets
+
+```bash
+python main.py postman.com supabase.com vapi.ai --output output/output.json
+```
+
+The script processes domains sequentially so a failure on one target does not stop the remaining targets.
+
+## Resilience
+
+- HTTP status >= 400 is skipped.
+- Playwright timeouts are caught.
+- Unexpected page errors are caught.
+- Empty crawl results become a structured error record.
+- LLM failures trigger a deterministic fallback extractor instead of crashing.
+- Missing fields are represented as empty strings/lists rather than fabricated facts.
+- Only same-domain links are followed.
+- Page count is bounded by `MAX_PAGES_PER_DOMAIN`.
+
+## Token optimization
+
+The LLM never receives the raw HTML tree. Before extraction, the crawler removes:
+`script`, `style`, `noscript`, `svg`, `nav`, `footer`, and `form` elements and sends bounded plain text.
+
+## Optional bonus extensions
+
+The architecture leaves clean extension points for:
+- search-engine lookup for external LinkedIn URLs
+- Browser-Use/LangGraph navigation
+- token/cost logging from the LLM response usage object
+
+## Sample output
+
+`output/output.json` contains a sample structured result for the three required domains.
+
+The sample values were prepared from first-party/public website evidence available during assignment preparation. When you run the live command, the file will be regenerated from the current websites and your configured LLM.
+
+## Loom demo plan (2–3 minutes)
+
+**0:00–0:25 — Architecture**
+Show `main.py`, `src/crawler.py`, `src/schemas.py`, and `src/llm.py`.
+
+**0:25–1:05 — Crawl**
+Run:
+```bash
+python main.py postman.com supabase.com vapi.ai --output output/output.json
+```
+Explain that Playwright renders JavaScript and follows relevant same-domain pages.
+
+**1:05–1:35 — Token optimization**
+Open `src/crawler.py` and show `clean_html()`. Explain that raw HTML is stripped before the LLM call.
+
+**1:35–2:10 — Structured extraction**
+Open `src/schemas.py` and show the Pydantic schema. Then open `output/output.json`.
+
+**2:10–2:30 — Resilience**
+Show the exception handling and fallback extractor. Explain that one failed domain does not stop the run.
+
+## Submission checklist
+
+- [ ] Push this folder to a public/private GitHub repository as appropriate.
+- [ ] Include the repository URL in the submission email.
+- [ ] Include `output/output.json`.
+- [ ] Record a 2–3 minute Loom demo.
+- [ ] Add your LinkedIn profile.
+- [ ] Explicitly answer the mandatory 40% manual-operations question.

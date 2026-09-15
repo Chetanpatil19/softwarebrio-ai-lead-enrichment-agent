@@ -1,0 +1,46 @@
+
+2–3 MINUTE LOOM SCRIPT
+
+0:00–0:20
+"Hi, this is Chetan Patil. This is my submission for the SoftwareBrio AI Engineer Intern assignment. I built a Python autonomous lead-enrichment pipeline that takes company domains, browses relevant pages with Playwright, cleans the page content, and uses an LLM with Pydantic structured output."
+
+0:20–0:50
+Show the repository tree:
+main.py
+src/crawler.py
+src/llm.py
+src/schemas.py
+src/fallback.py
+
+Say:
+"The crawler starts from the homepage and ranks relevant internal links such as About, Team, Contact and Pricing. It only follows same-domain links and limits the number of pages."
+
+0:50–1:20
+Show src/crawler.py and clean_html().
+
+Say:
+"I don't send raw HTML to the LLM. Scripts, styles, SVGs, navigation, footer and forms are removed, and the remaining text is bounded to control token usage and latency."
+
+1:20–1:50
+Show src/schemas.py and src/llm.py.
+
+Say:
+"The extraction is schema-driven. The model returns a company overview, ICP, public emails, leadership information, source pages and a confidence score. Unsupported information is left empty instead of being invented."
+
+1:50–2:15
+Run:
+python main.py postman.com supabase.com vapi.ai --output output/output.json
+
+Show the generated JSON.
+
+Say:
+"The pipeline processes each domain independently, so a failure does not stop the whole batch."
+
+2:15–2:35
+Show src/fallback.py and exception handling.
+
+Say:
+"I also added resilience for timeouts, HTTP failures, empty pages and LLM failures. If the LLM is unavailable, the crawler falls back to deterministic extraction rather than crashing."
+
+2:35–2:45
+"Thank you for reviewing my submission."

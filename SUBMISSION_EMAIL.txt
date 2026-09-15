@@ -1,0 +1,18 @@
+
+Subject: [AI Intern Submission] - Chetan Patil
+
+Dear SoftwareBrio Team,
+
+Thank you for the opportunity to complete the AI Engineer Intern practical assignment.
+
+Please find my submission below:
+
+1. GitHub Repository: [PASTE YOUR GITHUB REPOSITORY LINK]
+2. Sample Output: Included in the repository as output/output.json
+3. Loom Demo: [PASTE YOUR LOOM LINK]
+4. LinkedIn: https://www.linkedin.com/in/chetan-patil-b68288319
+5. Mandatory Operations Confirmation:
+Yes, I am 100% comfortable spending roughly 40% of my working hours on manual lead prospecting, email discovery, and account handling alongside my AI engineering tasks.
+
+Best regards,
+Chetan Patil

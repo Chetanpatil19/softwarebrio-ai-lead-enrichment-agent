@@ -1,0 +1,70 @@
+[
+  {
+    "domain": "postman.com",
+    "company_overview": "Postman operates a technology-focused business and its website describes products or services related to platform, software, developer, developers. The available website content indicates that its offerings are designed for customers and users who need these capabilities.",
+    "target_audience_icp": "Developers, engineers, and technical teams using the company's software platform, APIs, or developer tools.",
+    "contact_emails": [
+      "help@postman.com",
+      "info-jp@postman.com",
+      "info@postman.com"
+    ],
+    "key_leadership_team": [],
+    "data_confidence_score": 0.5499999999999999,
+    "source_pages": [
+      "https://postman.com",
+      "https://www.postman.com/company/about-postman/",
+      "https://www.postman.com/company/contact-sales/",
+      "https://www.postman.com/company/careers/",
+      "https://www.postman.com/company/contact-us/",
+      "https://www.postman.com/jp/company/about-postman/",
+      "https://www.postman.com/product/",
+      "https://www.postman.com/jp/company/contact-sales/"
+    ],
+    "llm_fallback": true,
+    "error": "Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}"
+  },
+  {
+    "domain": "supabase.com",
+    "company_overview": "Supabase operates a technology-focused business and its website describes products or services related to platform, software, technology, developer. The available website content indicates that its offerings are designed for customers and users who need these capabilities.",
+    "target_audience_icp": "Developers, engineers, and technical teams using the company's software platform, APIs, or developer tools.",
+    "contact_emails": [
+      "support@supabase.com"
+    ],
+    "key_leadership_team": [],
+    "data_confidence_score": 0.5499999999999999,
+    "source_pages": [
+      "https://supabase.com",
+      "https://supabase.com/pricing",
+      "https://supabase.com/dashboard/support/new?category=sales&subject=Enquiry%20about%20larger%20instance%20sizes",
+      "https://supabase.com/contact/sales",
+      "https://supabase.com/customers",
+      "https://supabase.com/customers/delightai",
+      "https://supabase.com/customers/berriai",
+      "https://supabase.com/customers/happyteams"
+    ],
+    "llm_fallback": true,
+    "error": "Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}"
+  },
+  {
+    "domain": "vapi.ai",
+    "company_overview": "Vapi operates a technology-focused business and its website describes products or services related to platform, software, technology, developer. The available website content indicates that its offerings are designed for customers and users who need these capabilities.",
+    "target_audience_icp": "Developers, engineers, and technical teams using the company's software platform, APIs, or developer tools.",
+    "contact_emails": [
+      "Talent@vapi.ai"
+    ],
+    "key_leadership_team": [],
+    "data_confidence_score": 0.5499999999999999,
+    "source_pages": [
+      "https://vapi.ai",
+      "https://vapi.ai/customers",
+      "https://vapi.ai/pricing",
+      "https://vapi.ai/careers",
+      "https://vapi.ai/sales",
+      "https://vapi.ai/customers/amazon-ring",
+      "https://vapi.ai/customers/kavak",
+      "https://vapi.ai/customers/unity-ai"
+    ],
+    "llm_fallback": true,
+    "error": "Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}"
+  }
+]
