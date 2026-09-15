@@ -1,0 +1,62 @@
+[
+  {
+    "domain": "postman.com",
+    "company_overview": "Postman is an API platform for building and using APIs. It helps teams create, test, manage, and collaborate around APIs throughout the API lifecycle.",
+    "target_audience_icp": "Developers, API engineers, QA teams, and organizations building, testing, managing, and governing APIs.",
+    "contact_emails": [
+      "info@postman.com",
+      "help@postman.com"
+    ],
+    "key_leadership_team": [
+      {
+        "name": "Abhinav Asthana",
+        "role": "CEO and Co-Founder",
+        "linkedin_url": ""
+      },
+      {
+        "name": "Ankit Sobti",
+        "role": "CTO and Co-Founder",
+        "linkedin_url": ""
+      },
+      {
+        "name": "Abhijit Kane",
+        "role": "Co-Founder",
+        "linkedin_url": ""
+      }
+    ],
+    "data_confidence_score": 0.96,
+    "source_pages": [
+      "https://postman.com",
+      "https://www.postman.com/company/about-postman/",
+      "https://www.postman.com/company/contact-us/"
+    ]
+  },
+  {
+    "domain": "supabase.com",
+    "company_overview": "Supabase is a Postgres development platform built for developers. It provides a full Postgres database together with services such as authentication, realtime functionality, storage, APIs, and edge functions.",
+    "target_audience_icp": "Developers and engineering teams building web, mobile, and backend applications with Postgres and managed infrastructure.",
+    "contact_emails": [
+      "support@supabase.com",
+      "security@supabase.com"
+    ],
+    "key_leadership_team": [],
+    "data_confidence_score": 0.87,
+    "source_pages": [
+      "https://supabase.com",
+      "https://supabase.com/careers",
+      "https://supabase.com/database"
+    ]
+  },
+  {
+    "domain": "vapi.ai",
+    "company_overview": "Vapi is a developer platform for building, deploying, and improving voice AI agents. It provides infrastructure for voice interactions, telephony, orchestration, monitoring, and integrations.",
+    "target_audience_icp": "Developers and product teams building voice AI agents for customer support, appointment scheduling, and phone-based experiences.",
+    "contact_emails": [],
+    "key_leadership_team": [],
+    "data_confidence_score": 0.82,
+    "source_pages": [
+      "https://vapi.ai",
+      "https://vapi.ai/docs"
+    ]
+  }
+]
