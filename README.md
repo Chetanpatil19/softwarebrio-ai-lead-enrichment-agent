@@ -134,5 +134,8 @@ Show the exception handling and fallback extractor. Explain that one failed doma
 - [ ] Include the repository URL in the submission email.
 - [ ] Include `output/output.json`.
 - [ ] Record a 2–3 minute Loom demo.
-- [ ] Add your LinkedIn profile.
+## Candidate
+
+LinkedIn: https://www.linkedin.com/in/chetan-patil-b68288319
+
 - [ ] Explicitly answer the mandatory 40% manual-operations question.
